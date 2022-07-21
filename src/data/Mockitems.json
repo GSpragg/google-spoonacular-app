@@ -1,0 +1,27 @@
+
+[
+    {
+      "id": 1,
+      "title": "Book",
+      "readyInMinutes": 10.99,
+      "image": "/imgs/book.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Computer",
+      "readyInMinutes": 1199,
+      "image": "/imgs/computer.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Banana",
+      "readyInMinutes": 1.05,
+      "image": "/imgs/banana.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Car",
+      "readyInMinutes": 14000,
+      "image": "/imgs/car.jpg"
+    }
+]
