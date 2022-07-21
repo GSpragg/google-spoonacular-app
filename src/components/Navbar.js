@@ -22,16 +22,14 @@ export function NavBar() {
       <AppBar position='fixed' color='inherit' >
         <Toolbar >
           <Typography variant='h5' color="inherit"
-          to="/home" as={Link} label="home">
+            to="/home" as={Link} label="home">
             Recipes App
             <CookieTwoToneIcon/>
           </Typography>
-          <Box sx={{ flexGrow: 1 }}>
-    </Box>   
+          <Box sx={{ flexGrow: 1 }}/>  
            <Profile/>
         </Toolbar>
-      </AppBar>
-             
+      </AppBar>         
     </>
 
    

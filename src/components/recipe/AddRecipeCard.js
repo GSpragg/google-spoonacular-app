@@ -7,8 +7,6 @@ import { AddRecipeForm } from './AddRecipeForm'
 
 export function AddRecipeCard() {
 
-
-
   return (
     <StyledCard
      sx={{

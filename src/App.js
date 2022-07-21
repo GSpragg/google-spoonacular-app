@@ -17,19 +17,12 @@ import { RecipeContext } from "./context/RecipeContext";
   const [user, setUser] = useState([])
   const [recipes, setRecipes] = useState([])
 
-
-
-   
-   
-   
-
-      
-      return (
-        <>
+    return (
+  <>
   <BrowserRouter>
     <UserContext.Provider value={{user, setUser}}>
       <RecipeContext.Provider value ={{recipes, setRecipes}}>       
-             google login Modal
+             {/* google login Modal */}
              {Object.keys(user).length === 0 &&
             <Modal
               open={true}>
@@ -45,7 +38,7 @@ import { RecipeContext } from "./context/RecipeContext";
       </RecipeContext.Provider>
     </UserContext.Provider>
   </BrowserRouter>
-    </>
+</>
   );
 }
 

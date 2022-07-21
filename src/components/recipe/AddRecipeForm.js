@@ -32,34 +32,31 @@ export function AddRecipeForm(props) {
         
         RecipeNameRef.current.value = null ;
     }
-    
-
 
   return (
-    <>
+<>
   <Grid container justifyContent={'center'} >
     <Grid item>
       <StyledPaper component="form" 
-      onSubmit = { handleaddRecipe }>
+        onSubmit = { handleaddRecipe }>
         <StyledTextField        
-        size="small"
-        variant='standard'
-        type="text"
-        placeholder="Add Recipe..."
-        aria-label='input'
-        value={inputRecipe}
-        onChange={(e) => setInputRecipe(e.target.value)}
-        ref={RecipeNameRef}
+          size="small"
+          variant='standard'
+          type="text"
+          placeholder="Add Recipe..."
+          aria-label='input'
+          value={inputRecipe}
+          onChange={(e) => setInputRecipe(e.target.value)}
+          ref={RecipeNameRef}
         />
       </StyledPaper>
     </Grid>
-        <Button
-            onClick={ handleaddRecipe }>
-            <AddCircleIcon aria-label="add"/>
-            Add Recipe
-        </Button>
+      <Button
+        onClick={ handleaddRecipe }>
+          <AddCircleIcon aria-label="add"/>
+          Add Recipe
+      </Button>
   </Grid>
 </>
-  )
-}
+  )}
 

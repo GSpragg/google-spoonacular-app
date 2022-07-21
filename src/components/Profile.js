@@ -16,14 +16,11 @@ export function Profile() {
   return (
     <>
        
-       {Object.keys(user).length !== 0 &&
-          <Typography>
-             Welcome {user.name}!
-            </Typography>
-            }
-            
-          
-        
+  {Object.keys(user).length !== 0 &&
+    <Typography>
+      Welcome {user.name}!
+    </Typography>
+  } 
     <Box>
     <Tooltip title = "sign out?" arrow>
     <IconButton
@@ -32,14 +29,11 @@ export function Profile() {
         aria-controls="menu-appbar"
         aria-haspopup="true"
         onClick={(e) => handleSignOut(e)}
-       
-     
     >
       <Avatar 
        src={user.picture}/>
     </IconButton>
     </Tooltip>
-  
   </Box>
   </>
   )}

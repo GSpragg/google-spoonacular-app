@@ -44,8 +44,6 @@ export function Category() {
               icon={<FastfoodIcon />} aria-label ="American"/>
           </Tooltip>
         </Tabs>   
-
-
  </Container>
   )
 }

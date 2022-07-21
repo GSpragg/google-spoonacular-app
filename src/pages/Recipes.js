@@ -10,13 +10,8 @@ export function Recipes() {
     const { setRecipes } = useContext(RecipeContext)
     const { recipes } = useContext(RecipeContext)
 
-
     const API_URL = `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}`
 
-    useEffect(() => {
-        getRecipes()
-
-        },[])
     
     const getRecipes = async () => {
         
@@ -32,10 +27,10 @@ export function Recipes() {
             console.log(data)
             setRecipes(localStorage.getItem('recipes'))  
         }
-        }
-        const removeRecipe = (id) => {
-            
-            console.log(id)
+    }
+    const removeRecipe = (id) => {
+        
+        console.log(id)
             // get recipe data 
             const data = JSON.parse(localStorage.getItem('recipes'))
             // to find index of selected recipe
@@ -45,17 +40,18 @@ export function Recipes() {
             let temp = data.filter(item => item.id !== id)
             // update local storage
             localStorage.setItem('recipes', JSON.stringify(temp))
-           console.log(data)
+            console.log(data)
             // set recipes
            setRecipes(data)   
-           }
-           
+        }
 
-    return (
-    <>
-
+        useEffect(() => {
+            getRecipes() 
+            },[])
         
-   
+
+        return (
+            <>
         <Container sx={{ py:"25px", mt:"10px", width: "100%", px: '25px'}}>
             <Grid container justify="center" spacing={3} >
                 <Grid item sx={{ mt: "60px"}} xs={12} sm={6} md={4} lg={4}>

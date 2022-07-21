@@ -2,16 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/material';
-import { theme } from './styles/Themes'; 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <ThemeProvider Theme={theme} />
-      <CssBaseline/>
-        <App />
+  <CssBaseline/>
+  <App />
   </>
 );
 

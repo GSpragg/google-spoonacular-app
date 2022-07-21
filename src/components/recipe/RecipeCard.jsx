@@ -7,11 +7,7 @@ import EditRoundedIcon from '@mui/icons-material/EditRounded';
 
 
 export const RecipeCard = ({ recipe: { id, image, title }, removeRecipe }) => {
-
-  
-  
-  
-  
+ 
   
   const { setRecipes } = useContext(RecipeContext)
   
@@ -62,7 +58,7 @@ export const RecipeCard = ({ recipe: { id, image, title }, removeRecipe }) => {
         <CardContent>  
             <CardActions  sx={{minHeight: "130px"}}>
               <Box autoComplete="off" component='form'
-              onSubmit={{handleSubmit}}>
+                onSubmit={{handleSubmit}}>
                 <StyledTypography variant='h5' label='{title}' className='recipe-name'>
                  {title}
                 </StyledTypography>
@@ -71,17 +67,14 @@ export const RecipeCard = ({ recipe: { id, image, title }, removeRecipe }) => {
                   startAdornment: (
                     <InputAdornment position="start">
                       <IconButton aria-label="search"
-                      onClick={ HandleUpdate }>
-                        
-                      <EditRoundedIcon/>
+                      onClick={ HandleUpdate }>                      
+                        <EditRoundedIcon/>
                       </IconButton>
                     </InputAdornment>
                     ),
                   }}      
                 onChange={(e)=> {setInputRecipeTitle(e.target.value)}}
                 />
-                <IconButton size = 'large'>
-                </IconButton >
               </Box>
             </CardActions >
             <ButtonGroup sx={{px: "5%"}}>
@@ -92,13 +85,13 @@ export const RecipeCard = ({ recipe: { id, image, title }, removeRecipe }) => {
             </Typography>
           </Button>
           <Button 
-          onClick={() => {HandleUpdate(title)}}>
+            onClick={() => {HandleUpdate(title)}}>
             <Typography>
               Edit Recipe
             </Typography>
           </Button>
-          </ButtonGroup>
-        </CardContent>
+        </ButtonGroup>
+      </CardContent>
     </StyledCard>                          
   )
 }

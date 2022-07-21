@@ -35,28 +35,27 @@ export function Searched() {
     <>
       {searched?.length > 0 ? (
         <Container sx={{ py:"25px", mt:"10px", width: "100%", px: '25px'}}>
-            <Grid container justify="center" spacing={3} >
-             {searched.map((item) => (           
-                   <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
-                    <RecipeCard recipe={item} removeRecipe={removeRecipe} />
-                  </Grid>
-                ))} 
-            </Grid>
+          <Grid container justify="center" spacing={3} >
+            {searched.map((item) => (           
+              <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
+                <RecipeCard recipe={item} removeRecipe={removeRecipe} />
+              </Grid>
+              ))} 
+          </Grid>
         </Container>
       ) : (
-        <>
+    <>
         <Grid container justifyContent={'center'} 
          sx={{pt: '15px'}}>
-    <Grid item>
-        <Typography
-        sx={{px: '25%', mt: '25px'}}
-        variant='h5'>
-          No Results
+          <Grid item>
+            <Typography
+            sx={{px: '25%', mt: '25px'}}
+            variant='h5'>
+              No Results
           </Typography>      
-          </Grid>
-          </Grid>
-        </>
-      )}
-     </>   
-  )
-}
+        </Grid>
+      </Grid>
+    </>
+  )}
+</>   
+)}

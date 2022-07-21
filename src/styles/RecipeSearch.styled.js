@@ -3,11 +3,9 @@ import { Box, Paper, styled, TextField } from '@mui/material';
 
   
   export const SearchIconWrapper = styled(Box)(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-   
-    height: '100%',
-    position: 'absolute',
     
+    height: '100%',
+    position: 'absolute', 
     display: 'flex-grid',
     alignItems: 'center',
     justifyContent: 'center',
@@ -18,13 +16,9 @@ import { Box, Paper, styled, TextField } from '@mui/material';
     marginLeft: '8px',
     marginRight: '8px',
     '& .MuiInputBase-input': {
-      // vertical padding + font size from searchIcon
-      
-      
+      // vertical padding + font size from searchIcon 
       Maxwidth: '100%',
-  
-      },
-    
+      },  
   }));
 
   export const StyledPaper = styled(Paper)`

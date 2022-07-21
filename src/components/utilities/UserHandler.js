@@ -17,12 +17,6 @@ const clientID = `${process.env.REACT_APP_GOOGLE_CLIENT_ID}`
 
   
 // if we have NO user: sign in button 
-//  function handleSignOut(event) {
-//   setUser({});
-//   document.getElementById("signInBox").hidden = false
-//   document.getElementById("signOutButton").hidden = true
-// } 
-
 // if we have a user: sign out button
 function handleCallBackResponse(response) {
 console.log("Encoded JWT ID token: " + response.credential);
@@ -50,9 +44,7 @@ google.accounts.id.renderButton(
 return (
   <>
      <StyledBox id="signInBox"/>
-     
-
-    </>
+  </>
   );
 }
 
